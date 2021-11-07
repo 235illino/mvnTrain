@@ -8,6 +8,7 @@ public class MainClass extends JFrame {
 
     public MainClass() throws IOException {
         super();
+        TestLib testLib = new TestLib();
         URL urlPicture = this.getClass().getResource("/simple.jpg");
         URL urlText = this.getClass().getResource("/text.txt");
         BufferedReader freader = new BufferedReader(new InputStreamReader(new FileInputStream(urlText.getPath()), StandardCharsets.UTF_8));
@@ -32,7 +33,7 @@ public class MainClass extends JFrame {
 
     }
     public static void main(String[] args) throws IOException {
-        TestLib testLib = new TestLib();
+
         MainClass mainClass = new MainClass();
     }
 }
